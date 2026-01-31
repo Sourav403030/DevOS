@@ -1,15 +1,19 @@
 import type { PropsWithChildren } from "react"
 import { Rnd } from "react-rnd"
 
+interface MacWindowProps extends PropsWithChildren {
+  width?: string;
+  height?: string;
+}
 
-const MacWindow = ({children}:PropsWithChildren) => {
+const MacWindow = ({children, width="720", height="520"}: MacWindowProps) => {
   return (
     <Rnd 
       default={{
         x: 400,
         y: 250,
-        width: 720,
-        height: 520,
+        width: width,
+        height: height,
       }}
       minWidth={520}
       minHeight={520}

@@ -5,7 +5,7 @@ const Resume = () => {
   return (
     <MacWindow>
         <div className='h-full overflow-auto'>
-            <iframe className='h-full w-full' src="/resume.pdf" frameborder="0"></iframe>
+            <iframe className='h-full w-full' src="/resume.pdf"></iframe>
         </div>
     </MacWindow>
   )
