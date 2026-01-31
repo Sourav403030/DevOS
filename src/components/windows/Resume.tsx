@@ -1,4 +1,3 @@
-import React from 'react'
 import MacWindow from './MacWindow'
 
 const Resume = () => {
