@@ -9,7 +9,10 @@ const Dock = ({ windowState, setWindowState }: DockProps) => {
   return (
     <footer>
       <div className="flex absolute bottom-3 left-1/2 translate-x-[-50%] px-8 py-2  gap-5  bg-[rgba(63,63,63,0.3)] backdrop-blur-2xl cursor-pointer items-center backdrop-opacity-100 rounded-2xl">
-        <div className="icon w-12 h-12 p-3 bg-linear-to-bl from-blue-100 to-blue-700 rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
+        <div 
+        onClick={()=>window.open("https://calendar.google.com/", "_blank")}
+
+        className="icon w-12 h-12 p-3 bg-linear-to-bl from-blue-100 to-blue-700 rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
           <img
             className="w-full h-full object-contain"
             src="/dock-icons/calendar.svg"
@@ -33,14 +36,28 @@ const Dock = ({ windowState, setWindowState }: DockProps) => {
             alt=""
           />
         </div>
-        <div className="icon w-12 h-12 p-3 bg-linear-to-bl from-purple-400 to-purple-800 rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
+        <div
+        onClick={()=>window.open("https://www.linkedin.com/in/sourav-sanjay-186259287/", "_blank")}
+         className="icon w-12 h-12 p-2  bg-white rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
           <img
             className="w-full h-full object-contain"
-            src="/dock-icons/link.svg"
+            src="/dock-icons/linkedin.svg"
             alt=""
           />
         </div>
-        <div className="icon w-12 h-12 p-3 bg-linear-to-bl from-blue-300 to-blue-700 rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
+        <div
+        onClick={()=>window.open("https://x.com/_Sourav_Sanjay_", "_blank")}
+         className="icon w-12 h-12 p-2 bg-white rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
+          <img
+            className="w-full h-full object-contain"
+            src="/dock-icons/x.svg"
+            alt=""
+          />
+        </div>
+        <div
+        onClick={()=>window.open("mailto:souravsanjay07@gmail.com", "_blank")}
+        
+         className="icon w-12 h-12 p-3 bg-linear-to-bl from-blue-300 to-blue-700 rounded-xl hover:scale-130 transition-all duration-150 ease-linear hover:translate-y-[-20%]">
           <img
             className="w-full h-full object-contain"
             src="/dock-icons/mail.svg"
