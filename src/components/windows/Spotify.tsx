@@ -1,9 +1,11 @@
+import type { windowPropsInterface } from "./Github"
 import MacWindow from "./MacWindow"
 
 
-const Spotify = () => {
+const Spotify = ({windowName, setWindowState}:windowPropsInterface) => {
   return (
-    <MacWindow width="400">
+    <MacWindow windowName={windowName} setWindowState={setWindowState}
+     width="400">
         <div className="h-full">
             <iframe className="h-full" data-testid="embed-iframe" style={{borderRadius: "12px"}}src="https://open.spotify.com/embed/album/2e7HNQJ0BcMoqwsVDwDhK8?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>

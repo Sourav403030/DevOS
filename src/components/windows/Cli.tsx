@@ -1,7 +1,8 @@
+import type { windowPropsInterface } from "./Github";
 import MacWindow from "./MacWindow";
 import Terminal from "react-console-emulator";
 
-const Cli = () => {
+const Cli = ({windowName, setWindowState}:windowPropsInterface) => {
   const commands = {
     about: {
       description: 'Display personal information',
@@ -223,7 +224,7 @@ Ready to explore? Let's get started! 💻
   `;
 
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} setWindowState={setWindowState} >
       <div className="h-full">
         <Terminal 
           className="h-full"

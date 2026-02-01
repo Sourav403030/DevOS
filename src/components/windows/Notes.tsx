@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import MacWindow from "./MacWindow"
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import type { windowPropsInterface } from "./Github";
 
-const Notes = () => {
+const Notes = ({windowName, setWindowState}:windowPropsInterface) => {
 
     const [markdown, setMarkdown] = useState<string | null>(null)
 
@@ -13,7 +14,7 @@ const Notes = () => {
         .then((text)=> setMarkdown(text))
     },[])
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} setWindowState={setWindowState}>
         <div className="h-full overflow-auto">
             {markdown ? (
                 <SyntaxHighlighter 

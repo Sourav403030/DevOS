@@ -1,6 +1,12 @@
 import { githubData } from '../../assets/githubData'
 import MacWindow from './MacWindow'
 import type { githubDataInterface } from '../../assets/githubData'
+import type { WindowStateInterface } from '../../App'
+
+export interface windowPropsInterface{
+    windowName: string
+    setWindowState: React.Dispatch<React.SetStateAction<WindowStateInterface>>;
+}
 
 const GitCard = ({data}: {data: githubDataInterface}) => {
     return <div className="card text-white w-80 h-112 bg-[#222] p-5 rounded-xl flex flex-col gap-2 cursor-default">
@@ -21,9 +27,9 @@ const GitCard = ({data}: {data: githubDataInterface}) => {
     </div>
 }
 
-const Github = () => {
+const Github = ({windowName, setWindowState}:windowPropsInterface) => {
   return (
-    <MacWindow>
+    <MacWindow windowName={windowName} setWindowState={setWindowState}  >
         <div className="cards p-5 flex flex-wrap gap-8 justify-center items-start">
             {githubData.map(project=>{
                 return <GitCard key={project.id} data={project} />
